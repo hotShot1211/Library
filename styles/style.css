@@ -94,7 +94,7 @@ form {
 }
 
 input {
-  height: 2rem;
+  height: 3rem;
   width: max-content;
   font-size: 2.3rem;
 }
@@ -118,3 +118,43 @@ h1 {
     font-size: x-large;
     margin-left: 40%;
 } 
+
+.delete {
+  /* border: aqua 1px solid; */
+  width: 95%;
+  height: 10%;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.book-1 {
+  border: blueviolet 1px solid;
+  background-color: aliceblue;
+  min-height: 40%;
+  min-width: 15%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin: 3% 0 0 3%;
+  align-items: center;
+}
+
+.details {
+  height: 90%;
+  width: 99%;
+  font-size: xx-large;
+
+}
+
+
+.book-display {
+  background-color: blanchedalmond;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
