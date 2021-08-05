@@ -10,14 +10,14 @@
     height: 70%;
     width: 100%;
     display: flex;
-    background-color: mediumturquoise;
+    background-color: #F7E6AD;
 }
 
 .book-detail {
     margin: 2% 2% 2% 2%;
-    background-color: lightcoral;
+    background-color: #FDE49C;
     height: 44%;
-    border: lightcoral 1px solid;
+    border: #FFB740 1px solid;
     width: 15%;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ h1{
     background-color: burlywood;
 }
 .project-details {
-    background-color: aquamarine;
+    background-color: #28FFBF;
     height: 80%;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: #BCFFB9;
 }
 
 img {
@@ -92,7 +92,7 @@ img:active {
     display: none;
     height: 60%;
     width: 25%;
-    background-color: cornsilk;
+    /* background-color: #F7E6AD; */
     border: darkgoldenrod 1px solid;
     flex-direction: column;
 }
@@ -101,14 +101,14 @@ img:active {
 .close-cntnr{
     height: 5%;
     width: 100%;
-    background-color: lavenderblush;
+    background-color: #F5FDB0;
     display: flex;
     justify-content: end;
 }
 form {
     display: flex;
     flex-direction: column;
-    background-color:lavender;
+    background-color:#F5FDB0;
     height: 95%;
     width: 100%;
     justify-content: center;
@@ -147,7 +147,7 @@ form button {
 .prjct-name {
     height: 70%;
     width: 40%;
-    background-color: aqua;
+    background-color: #28FFBF;
     margin: 5%;
     font-size: 500%;
     font-family: 'Courier New', Courier, monospace;
