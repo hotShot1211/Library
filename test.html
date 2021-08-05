@@ -11,39 +11,17 @@
 </head>
 
 <body>
-    <div class='main-container'>
-        <form action="#">
-           Name: <input type="text"  name="value">
-           author: <input type="text" name="value">
-           pages: <input type="number" name="value">
-           read: <input type="checkbox" name="value">
-           <button type="submit">Submit</button>
-      
-        </form>
-        <div class="book-display">
-           
+    <form>
+        <div>
+          <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+          <label for="subscribeNews">Subscribe to newsletter?</label>
         </div>
-    </div>
+        <div>
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
 
     <script src='scripts/test.js'></script>
 </body>
 
 </html>
-<!-- let form = document.querySelector("form");
-let val = [];
-console.log(form);
-let newBook;
-let read;
-form.addEventListener("submit", function(event){
-   for(let i = 0; i < form.length; i++){
-       val.push(form.elements[i].value);
-   }
-   console.log(val);
-   read = val[3] == "on" ? "read" : "not yet";
-   newBook = new Book(val[0], val[1], val[2], read);
-   addBookToLibrary(newBook);
-   myLibrary.forEach(book => {
-    di
-})
-   event.preventDefault();
-}) -->

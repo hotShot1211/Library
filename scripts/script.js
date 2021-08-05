@@ -22,25 +22,20 @@ function Book(title, author, pages, read){
 
 function bookDisplay(myLibrary){
     display.innerHTML = "";
-    let i = 0;
     myLibrary.forEach(book => {
-        let div = document.createElement("div");
-        div.classList.add("book-1");
-        // div.setAttribute("data-number", i)
-        div.innerHTML = `
-    <div class="delete"><button id="${i}">X</button></div>
-    <div class="details">
+        let i = 0;
+        let div =  document.createElement("div");
+        div.classList.add("book-detail");
+        div.innerHTML = ` 
         <div class="title">${book.title}</div>
-        <div class="author">author: ${book.author}</div>
-        <div class="pages">pages: ${book.pages}</div>
-        <div class="read">${book.read}</div>
-
-    </div>`
+        <div class="author">Author: ${book.author}</div>
+        <div class="pages">Pages: ${book.pages}</div>
+        <button class="read-status read">Read</button>
+        <button class="delete" id="${i}">Delete</button>`;
         display.append(div);
         i++;
-
-
     })
+    
 }
 
 function deleteBook(){
@@ -84,8 +79,12 @@ form.addEventListener("submit", function (event) {
     add.style.display = 'block';
     event.preventDefault();
     display.click();
-
+    
 })
+
+
+
+
 display.addEventListener('click', deleteBook)
 let theHobbit = new Book('The Hobbit', 'J.R.R. Tolkein', '256', "Not Yet Read");
 
@@ -97,7 +96,31 @@ function addBookToLibrary(newBook){
 addBookToLibrary(theHobbit);
 addBookToLibrary(harryPotter);
 
+let readStatus = display.querySelectorAll(".read-status");
+readStatus.forEach(but => {
+    but.addEventListener("click", () => {
+        let readClass = but.getAttribute("class");
+    let classList = readClass.split(" ");
+    console.log(classList);
+    classList.forEach(element => {
+        if(element == "read"){
+            but.classList.remove("read");
+            but.classList.add("not-read");
+            but.innerText = "not-read";
+        }
+        else{
+            but.classList.remove("not-read");
+            but.classList.add("read");
+            but.innerText = "read";
+        }
+        
+    });
+    })
+})
 
+window.addEventListener("click", (e)=> {
+    console.log(e);
+})
 
 
 

@@ -119,14 +119,6 @@ h1 {
     margin-left: 40%;
 } 
 
-.delete {
-  /* border: aqua 1px solid; */
-  width: 95%;
-  height: 10%;
-  display: flex;
-  justify-content: right;
-  align-items: flex-end;
-}
 
 .book-1 {
   border: blueviolet 1px solid;
@@ -158,3 +150,49 @@ h1 {
   flex-wrap: wrap;
   overflow: auto;
 }
+
+.book-detail {
+  margin: 2% 2% 2% 2%;
+  background-color: lightcoral;
+min-height: 40%;
+border: lightcoral 1px solid;
+width: 18%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 3%;
+text-align: center;
+overflow: auto;
+}
+
+.title{
+  word-wrap: break-word;
+  font-size: xx-large;
+}
+
+.book-detail div {
+  font-size: x-large;
+  font-weight: 400;
+  margin: 2% 2% 2% 2%;
+}
+
+.book-detail button {
+  margin: 2% 2% 2% 2%;
+  height: 15%;
+  width: 50%;
+  font-size: x-large;
+  
+
+}
+
+.not-read {
+  background-color: lightsalmon;
+
+}
+
+.read {
+  background-color: limegreen;
+  
+}
+
