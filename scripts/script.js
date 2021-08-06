@@ -6,6 +6,12 @@ let frmOpen = document.querySelector(".btn-cntnr img");
 let submitBtn = document.querySelector("form button");
 let form = document.querySelector("form");
 
+function setLocalStorage(){
+    localStorage.setItem("books", JSON.stringify(myLibrary));
+}
+
+
+
 
 //constructor to create book object
 function Book(title, author, pages, read) {
@@ -17,6 +23,13 @@ function Book(title, author, pages, read) {
         return `${this.title} by ${this.author}, ${this.pages}, ${this.read}`;
     }
 }
+
+
+//function to add book in library
+function addBookToLibrary(newBook) {
+    myLibrary.push(newBook);
+}
+
 
 //function to display books on the screen
 function bookDisplay(){
@@ -63,7 +76,7 @@ function changeReadStatus(){
                     but.innerText = "read";
                     myLibrary[num].read = "read";
                 }
-                
+                setLocalStorage();
             });
         })
     })
@@ -82,7 +95,7 @@ function deleteBook(){
             changeReadStatus();
         })
     })
-    
+    setLocalStorage();
 }
 
 //closes form
@@ -100,12 +113,15 @@ frmOpen.addEventListener("click", () => {
 let theHobbit = new Book('The Hobbit', 'J.R.R. Tolkein', '256', "not-read");
 
 let harryPotter = new Book('Harry Potter', 'J.K. Rowling', '250', 'read');
-function addBookToLibrary(newBook) {
-    myLibrary.push(newBook);
-}
 
-addBookToLibrary(theHobbit);
-addBookToLibrary(harryPotter);
+if(localStorage.getItem("books") == null){
+    addBookToLibrary(theHobbit);
+    addBookToLibrary(harryPotter);
+
+}
+else{
+    myLibrary = JSON.parse(localStorage.getItem("books"));
+}
 
 
 //form fill and submit and displayand
@@ -122,6 +138,7 @@ submitBtn.addEventListener("click", (e) => {
     }
     let newBook = new Book(val[0], val[1], val[2],read);
     addBookToLibrary(newBook);
+    setLocalStorage()
     bookDisplay();
     readStatus = document.querySelectorAll(".read-status");
     changeReadStatus();
