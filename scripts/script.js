@@ -14,16 +14,27 @@ function setLocalStorage(){
 
 
 //constructor to create book object
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function () {
-        return `${this.title} by ${this.author}, ${this.pages}, ${this.read}`;
+// function Book(title, author, pages, read) {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.info = function () {
+//         return `${this.title} by ${this.author}, ${this.pages}, ${this.read}`;
+//     }
+// }
+
+
+//book class
+
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
     }
 }
-
 
 //function to add book in library
 function addBookToLibrary(newBook) {
